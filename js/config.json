@@ -1,0 +1,27 @@
+const CONFIG = {
+	// FontAwesome icon mappings
+	icons: {
+		nav: {
+			readme: 'fa-light fa-file-lines',
+			design: 'fa-light fa-palette',
+			build: 'fa-light fa-screwdriver-wrench',
+			create: 'fa-light fa-wand-magic-sparkles',
+			write: 'fa-light fa-pen-nib'
+		},
+		social: {
+			email: 'fa-light fa-envelope',
+			twitter: 'fa-brands fa-twitter',
+			github: 'fa-brands fa-github',
+			bookmark: 'fa-light fa-bookmark',
+			linkedin: 'fa-brands fa-linkedin'
+		}
+	},
+
+	// Site metadata
+	meta: {
+		title: 'Charlie Weston | Design Engineer',
+		email: 'charlie.rweston@gmail'
+	}
+};
+
+export default CONFIG;

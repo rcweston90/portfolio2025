@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Inter', sans-serif;
+}
+
+/* Enhanced sidebar navigation styling */
+.nav-link {
+  @apply flex items-center justify-between py-2 px-3 rounded-lg;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(0);
+}
+/* Make the hover selector more specific and add !important */
+.nav-link:hover,
+aside nav .nav-link:hover {
+  background-color: #fafafa !important;
+  transform: translateX(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+/* Match active state */
+.nav-link.text-primary,
+aside nav .nav-link.text-primary {
+  background-color: #fafafa !important;
+}
+
+/* Enhanced social icons hover effect */
+.social-icon {
+  @apply p-2 rounded-full;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+
+.social-icon:hover {
+  @apply bg-gray-100;
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced icon animations */
+[data-lucide] {
+  width: 18px;
+  height: 18px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover [data-lucide] {
+  transform: rotate(12deg) scale(1.1);
+}
+
+/* Content card hover effects - for design.html and build.html */
+.border.rounded-lg, .border-b {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.border.rounded-lg:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #e5e7eb;
+}
+
+.border-b:hover {
+  padding-left: 1rem;
+  border-color: #000;
+}
+
+/* Text hover animations */
+h1, h2, h3 {
+  transition: all 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover {
+  letter-spacing: 0.5px;
+  transform: translateX(2px);
+}
+
+/* Enhanced new-content badge */
+.new-content {
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-10px);
+}
+
+.nav-link:hover .new-content {
+  opacity: 1;
+  transform: translateX(0);
+}
